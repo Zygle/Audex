@@ -1,6 +1,6 @@
 # Audex
 
-Simple personal project that extends https://github.com/ggml-org/whisper.cpp.git the main scope of this project is to generate text from .m4a files with a NN modell.
+Simple personal project that extends [Whisper.cpp](https://github.com/ggml-org/whisper.cpp.git) the main scope of this project is to generate text from .m4a files with a NN modell.
 The code can handle different languages.
 
 
