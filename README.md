@@ -5,4 +5,4 @@ The code can handle different languages.
 
 
 how to run:
-/build/audex   --model models/ggml-large-v3.bin   --device cpu   --task transcribe   --language hu   --beam-size 8   input.m4a > output.txt
+./build/audex   --model models/ggml-large-v3.bin   --device cpu   --task transcribe   --language hu   --beam-size 8   input.m4a > output.txt
