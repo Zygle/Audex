@@ -29,6 +29,7 @@ int default_thread_count() {
     << "  --gpu-device <id>    GPU device index for whisper.cpp (default: 0)\n"
     << "  --threads <n>        Number of inference threads (default: hardware concurrency)\n"
     << "  --beam-size <n>      Beam size, 1 = greedy decoding (default: 5)\n"
+    << "  --no-progress        Disable the terminal progress bar\n"
     << "  -h, --help           Show this help\n\n"
     << "Examples:\n"
     << "  audex --model models/ggml-large-v3.bin --task translate --language hu input.m4a\n"
@@ -126,6 +127,11 @@ WhisperRunOptions parse_arguments(const int argc, char** argv) {
         throw std::invalid_argument("--beam-size must be greater than zero");
       }
       options.beam_size = static_cast<std::size_t>(beam_size);
+      continue;
+    }
+
+    if (argument == "--no-progress") {
+      options.show_progress = false;
       continue;
     }
 

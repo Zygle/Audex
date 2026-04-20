@@ -22,6 +22,7 @@ struct WhisperRunOptions {
   int threads = 4;
   int gpu_device = 0;
   std::size_t beam_size = 5;
+  bool show_progress = true;
   Task task = Task::kTranslate;
   Device device = Device::kCpu;
 };
