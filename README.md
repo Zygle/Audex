@@ -5,12 +5,14 @@ The code can handle different languages.
 
 ## build
 
+after cloning
+
 Cuda:
 cmake -S . -B build -DGGML_CUDA=1
-cmake --build build -j
 
 Vulkan:
 cmake -S . -B build -DGGML_VULKAN=1
+
 cmake --build build -j
 
 how to run:
